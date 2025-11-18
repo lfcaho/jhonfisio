@@ -1,0 +1,82 @@
+/* --- Definición de Variables y Colores (Basado en Tailwind) --- */
+/* Esta sección facilita el uso de los colores de la marca directamente en CSS. */
+:root {
+    --primary-blue: #1e40af;       /* Azul oscuro profesional */
+    --secondary-green: #059669;    /* Verde profundo para vitalidad */
+    --accent-light: #f0f9ff;       /* Fondo muy claro para cards */
+    --text-dark: #1f2937;          /* Texto oscuro principal */
+    --background-gray: #f7f7f7;    /* Fondo general de la página */
+}
+
+/* --- Estilos Globales y Tipografía --- */
+
+body {
+    /* La fuente 'Inter' ya debe estar cargada en el HTML */
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-gray);
+    padding: 2rem 0;
+    line-height: 1.6;
+    color: var(--text-dark); /* Color de texto base */
+}
+
+/* --- Estilos para la Tarjeta Principal (Container Card) --- */
+
+.container-card {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    /* Borde superior usando el color primario para estética */
+    border-top: 5px solid var(--primary-blue); 
+}
+
+/* --- Estilos para Encabezados y Separadores --- */
+
+/* Estilo para los títulos de sección (Sobre mí, Misión, Servicios, etc.) */
+.section-header {
+    font-size: 1.5rem; /* text-2xl */
+    color: var(--primary-blue);
+    border-bottom: 2px solid var(--secondary-green); /* Línea verde de vitalidad */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* --- Estilos para Tarjetas de Servicio/Beneficio --- */
+
+.service-benefit-card {
+    background-color: var(--accent-light); /* Fondo muy claro (azul suave) */
+    border-left: 4px solid var(--primary-blue);
+    padding: 1rem; /* p-4 */
+    border-radius: 0.5rem; /* rounded-lg */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Efecto hover interactivo */
+.service-benefit-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Color específico para el texto dentro de las tarjetas de servicio */
+.service-benefit-card p {
+    color: var(--secondary-green);
+}
+
+/* --- Estilos de Texto Específicos (Para mantener la consistencia) --- */
+
+.text-primary-blue { color: var(--primary-blue); }
+.text-secondary-green { color: var(--secondary-green); }
+.text-text-dark { color: var(--text-dark); }
+
+/* Estilos de párrafos dentro de secciones para mejor legibilidad */
+.leading-relaxed {
+    line-height: 1.75; /* Equivalente a Tailwind leading-relaxed */
+}
+
+/* Estilos para el listado de beneficios (los checks) */
+.space-y-3 > li {
+    margin-top: 0.75rem;
+}
+.space-y-3 > li:first-child {
+    margin-top: 0;
+}

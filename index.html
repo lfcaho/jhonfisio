@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhon Martinez | Fisioterapia </title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    // Esta configuración define los colores que usarán las clases de Tailwind
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    // Colores principales de la marca
+                    'primary': '#1e40af', // Azul oscuro profesional
+                    'secondary': '#059669', // Verde profundo para vitalidad
+                    'accent': '#00ADB5', // Color de acento (Teal)
+                    
+                    // Colores de fondo y texto
+                    'bg-light': '#f0f9ff', // Fondo muy claro para cards (similar a accent-light)
+                    'text-dark': '#1f2937', // Texto oscuro principal
+                },
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                }
+            }
+        }
+    }
+    </script>
+    <!-- Carga de Font Awesome para iconos de Redes Sociales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLMDJc5fPzL2kP/M1z/0rD0Rj/6yG4Gk2G3I1xJt2nL8YF7kGg0xV1wW8P7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Configuración para un esquema de colores profesional (Azul oscuro y Teal de acento) -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body class="antialiased">
+
+    <!-- Encabezado y Navegación (Fijo) -->
+ <header class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <a href="index.html" class="text-3xl font-extrabold text-primary tracking-tight logo-link">
+                JHON<span class="text-accent">FISIO</span>
+            </a>
+
+            <nav class="hidden md:flex gap-x-2 lg:gap-x-4 items-center text-lg">
+                <a href="index.html" class="nav-link text-gray-600 hover:text-accent hover:bg-gray-100 font-medium">Inicio</a>
+                <a href="historia.html" class="nav-link text-gray-600 hover:text-accent hover:bg-gray-100 font-medium">Acerca de mí</a>
+                <a href="servicios.html" class="nav-link text-gray-600 hover:text-accent hover:bg-gray-100 font-medium">Servicios</a>
+                <a href="galeria.html" class="nav-link text-gray-600 hover:text-accent hover:bg-gray-100 font-medium">Galería</a>
+                <a href="contacto.html" class="nav-link text-gray-600 hover:text-accent hover:bg-gray-100 font-medium">Contacto</a>
+                <a href="https://wa.me/573127333160" class="nav-link px-4 py-2 bg-accent text-white rounded-full shadow-md hover:bg-opacity-90 transition duration-300 font-semibold hover:bg-primary/90 hover:text-white">Agenda tu Valoración</a>
+            </nav>
+
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path><path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-accent">Inicio</a>
+            <a href="historia.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-accent">Acerca de mí</a>
+            <a href="servicios.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-accent">Servicios</a>
+            <a href="galeria.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-accent">Galería</a>
+            <a href="contacto.html" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-accent">Contacto</a>
+            <a href="https://wa.me/573127333160" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-white bg-accent hover:bg-primary/90 text-center mt-2">Agenda tu Valoración</a>
+        </div>
+    </div>
+</header>
+
+    <main>
+    <section id="home" class="page-content bg-gray-50 pt-0">
+    
+    <!-- Hero Section con Imagen de Fondo y Overlay (Se mantiene igual) -->
+    <div class="relative bg-gray-700 text-white py-20 md:py-32 overflow-hidden">
+        
+        <!-- Imagen de Fondo (Placeholder) -->
+        <!-- SUGERENCIA: Reemplazar el URL de placehold.co con una foto de Jhon trabajando en un domicilio -->
+        <div class="absolute inset-0 bg-cover bg-center transition duration-500 ease-in-out transform scale-100" 
+             style="background-image: url('Img/banner.jpg');">
+        </div>
+        
+        <!-- Overlay Oscuro para Garantizar la Legibilidad del Texto Blanco -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <!-- Contenido (Asegurando que esté sobre la imagen) -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 leading-tight">
+                FISIOTERAPIA PRIVADA. <span class="text-accent block sm:inline">TUS RESULTADOS EN CASA.</span>
+            </h1>
+            <p class="text-xl sm:text-2xl mb-8 font-light max-w-3xl mx-auto opacity-90">
+                Jhon Martínez te ofrece recuperación neuromuscular avanzada directamente en la comodidad de tu hogar.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <!-- Se asume que este enlace va a una sección dentro de index.html -->
+                <a href="#beneficios" class="px-8 py-3 bg-accent text-white text-lg font-semibold rounded-full shadow-xl hover:bg-opacity-90 transition duration-300 transform hover:scale-[1.02]">
+                    Ver Beneficios
+                </a>
+                <!-- Se usa el formato de WhatsApp para Agenda tu Valoración -->
+                <a href="https://wa.me/573127333160" class="px-8 py-3 bg-white text-primary text-lg font-semibold rounded-full shadow-xl hover:bg-gray-100 transition duration-300 transform hover:scale-[1.02]" target="_blank" rel="noopener noreferrer">
+                    Agenda tu Valoración
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- NUEVA SECCIÓN: HISTORIA CORTA DE JHON (ENCIMA DE BENEFICIOS) -->
+    <!-- ========================================================= -->
+    <div class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Mi historia</h2>
+            
+            <!-- Estructura de DOS COLUMNAS (Foto grande 1/3, Texto 2/3) -->
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-10 bg-gray-50 p-8 rounded-3xl shadow-2xl">
+                
+                <!-- Columna 1: FOTO GRANDE (1/3 del ancho en desktop) -->
+                <div class="w-full md:w-1/3 flex-shrink-0">
+                    <img src="Img/Jhon1.jpeg" alt="Retrato de Jhon Martínez, Fisioterapeuta" 
+                         class="w-full h-auto object-cover rounded-2xl shadow-xl aspect-square"
+                         onerror="this.onerror=null; this.src='https://placehold.co/400x400/80C4F5/121212?text=FOTO+JHON'">
+                </div>
+                
+                <!-- Columna 2: HISTORIA BREVE (2/3 del ancho en desktop) -->
+                <div class="w-full md:w-2/3">
+                    <h3 class="text-2xl font-bold text-primary-blue mb-4">Especialización en Resultados</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Soy <strong>Jhon Martínez</strong>, fisioterapeuta con especialización en <strong>Recuperación y Rehabilitación de Lesiones Musculares por medio del Ejercicio</strong>, cursada en Cuba. Mi experiencia inicial en clínicas de Bogotá me mostró que los tratamientos protocolizados eran ineficientes.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Esto me impulsó a crear un modelo propio, centrado en la <strong>atención personalizada, la estimulación nerviosa dirigida y la reconexión neuromuscular</strong>. Mi compromiso es lograr <strong>recuperaciones reales, rápidas y sostenibles</strong>, devolviendo a mis pacientes su confianza, independencia y calidad de vida.
+                    </p>
+                    <a href="historia.html" class="px-6 py-2 bg-primary text-white text-sm font-semibold rounded-full shadow-md hover:bg-primary/90 transition duration-300">
+                        Acerca de mí
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Sección de Beneficios de Jhon (Se mantiene igual, se le añade un ID para enlace) -->
+    <div id="beneficios" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Beneficios Exclusivos con JhonFisio</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                
+                <!-- Beneficio 1: Resultados más Rápidos -->
+                <div class="p-6 rounded-2xl bg-white shadow-xl border-t-4 border-accent">
+                    <span class="text-accent block mb-3 text-4xl">&#x23F1;</span>
+                    <h3 class="font-bold text-xl text-primary mb-1">Resultados Comprobados y Rápidos</h3>
+                    <p class="text-gray-600">Terapias diseñadas con evidencia científica para acortar los tiempos de recuperación sin sacrificar la calidad.</p>
+                </div>
+                
+                <!-- Beneficio 2: Rehabilitación Integral -->
+                <div class="p-6 rounded-2xl bg-white shadow-xl border-t-4 border-accent">
+                    <span class="text-accent block mb-3 text-4xl">&#x1F4AA;</span>
+                    <h3 class="font-bold text-xl text-primary mb-1">Rehabilitación Integral y Sostenible</h3>
+                    <p class="text-gray-600">No solo aliviamos el dolor, recuperamos la funcionalidad completa y se fortalece la estructura para evitar recaídas.</p>
+                </div>
+                
+                <!-- Beneficio 3: Estimulación Neuromuscular -->
+                <div class="p-6 rounded-2xl bg-white shadow-xl border-t-4 border-accent">
+                    <span class="text-accent block mb-3 text-4xl">&#x1F9E0;</span>
+                    <h3 class="font-bold text-xl text-primary mb-1">Estimulación Neuromuscular Avanzada</h3>
+                    <p class="text-gray-600">Conexión directa entre el sistema nervioso y el músculo, clave para la recuperación incluso en lesiones graves.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================= -->
+    <!-- NUEVA SECCIÓN: MAPA DE UBICACIÓN (DEBAJO DE BENEFICIOS) -->
+    <!-- ========================================================= -->
+    <div class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">Ubicación</h2>
+            
+            <!-- Contenedor del Mapa (Iframe de Google Maps) -->
+            <div class="relative h-96 w-full rounded-2xl shadow-2xl overflow-hidden">
+                <!-- 
+                    NOTA: Este iframe utiliza una ubicación de ejemplo (Medellín, Colombia). 
+                    Debes reemplazar el 'src' con el código de incrustación de Google Maps de la ubicación real de Jhon o su área de servicio.
+                -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15867.734436682917!2d-75.19388570235411!3d6.1396214015557735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46a645d0be763f%3A0x57c74307593101be!2sGranada%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1762954090835!5m2!1ses!2sco"
+                    height="100%"
+                    width="100%"
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <p class="text-center text-gray-600 mt-6 max-w-3xl mx-auto">
+                Jhon Martínez atiende principalmente en Granada (Antioquia), extendiendo sus servicios a veredas cercanas, Medellín y Bogotá.
+            </p>
+        </div>
+    </div>
+</section>
+</main>
+    <!-- Footer (REDES SOCIALES CON ENLACES PARA EDITAR) -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <div class="flex flex-col md:flex-row justify-between items-center border-b border-white/20 pb-6 mb-6">
+                <!-- Logo -->
+                <p class="text-2xl font-bold mb-4 md:mb-0">JHON<span class="text-accent">FISIO</span></p>
+
+                <!-- Redes Sociales (Aquí es donde debes personalizar los "href") -->
+                <div class="flex space-x-6 text-2xl mb-4 md:mb-0">
+                    <!-- Instagram: REEMPLAZA EL ENLACE DE EJEMPLO POR EL REAL -->
+                    <a href="https://www.instagram.com/jhon_fisioterapeuta?igsh=NmV2bDc4cXZ1MHdz" target="_blank" class="text-white hover:text-accent transition duration-300" aria-label="Instagram de JhonFisio">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <!-- Facebook: REEMPLAZA EL ENLACE DE EJEMPLO POR EL REAL -->
+                    <a href="https://facebook.com/tucambio" target="_blank" class="text-white hover:text-accent transition duration-300" aria-label="Facebook de JhonFisio">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- WhatsApp: USA https://wa.me/CODIGOPAISNUMEROTELEFONO (ej: 573005551234) -->
+                    <a href="https://wa.me/573127333160" target="_blank" class="text-white hover:text-accent transition duration-300" aria-label="WhatsApp de JhonFisio">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+
+                <!-- Enlaces Legales -->
+                <div class="space-x-6">
+                    <a href="#" class="text-white/80 hover:text-accent transition duration-300 text-sm">Aviso Legal</a>
+                    <a href="#" class="text-white/80 hover:text-accent transition duration-300 text-sm">Política de Privacidad</a>
+                </div>
+            </div>
+            <p class="text-sm text-white/70">&copy; 2025 JhonFisio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script de Lógica Estática (Routing y Formulario Simulado) -->
+ <script>
+    // Función para mostrar el modal de estado (éxito o error simulado)
+    function showStatusModal(isSuccess, title, message) {
+        const modal = document.getElementById('status-modal');
+        const icon = document.getElementById('modal-icon');
+        const modalTitle = document.getElementById('modal-title');
+        const modalMessage = document.getElementById('modal-message');
+        
+        modalTitle.textContent = title;
+        modalMessage.textContent = message;
+
+        if (isSuccess) {
+            icon.innerHTML = '<span class="text-accent">&#10004;</span>'; // Checkmark
+            modalTitle.classList.remove('text-red-600');
+            modalTitle.classList.add('text-primary');
+        } else {
+            icon.innerHTML = '<span class="text-red-600">&#9888;</span>'; // Warning
+            modalTitle.classList.remove('text-primary');
+            modalTitle.classList.add('text-red-600');
+        }
+
+        modal.classList.remove('hidden');
+        // Forzar la re-renderización para la transición
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            modal.querySelector('div').classList.remove('scale-95');
+            modal.querySelector('div').classList.add('scale-100');
+        }, 10); 
+    }
+
+    // Lógica de Envío de Formulario SIMULADA
+    function handleSubmit(e) {
+        e.preventDefault();
+        const form = e.target;
+        const button = document.getElementById('submit-button');
+        
+        button.textContent = "Enviando...";
+        button.disabled = true;
+        
+        // Simular un envío exitoso 
+        setTimeout(() => {
+            showStatusModal(true, "¡Solicitud Enviada!", "Gracias por tu interés. Este formulario es estático y no guarda datos. Por favor, usa el contacto directo.");
+            form.reset(); 
+            button.textContent = "Enviar Solicitud de Valoración";
+            button.disabled = false;
+        }, 1000); // 1 segundo de simulación de envío
+    }
+
+    // Inicializar y adjuntar eventos
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        // Adjuntar el evento de submit del formulario estático
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', handleSubmit);
+        }
+
+        // Funcionalidad del Menú Móvil
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+    });
+</script>
+</body>
+</html>
